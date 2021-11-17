@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ZackeryRSmith/QCBuilder">
-    <img src="https://github.com/ZackeryRSmith/QCBuilder" alt="QCBuilder Logo" width="180" height="180">
+    <img src="https://github.com/ZackeryRSmith/QCBuilder/blob/main/images/QCBuilder.jpg" alt="QCBuilder Logo" width="180" height="180">
   </a>
 
 <h3 align="center">QCBuilder</h3>
@@ -18,11 +18,9 @@
   <p align="center">
     The quickest Rob assembler you've ever seen!
     <br />
-    <a href="https://github.com/WillsCHEATTT/DOSSLib"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ZackeryRSmith/Rob"><strong>Check out rob »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/WillsCHEATTT/DOSSLib">View Examples</a>
-    ·
     <a href="https://github.com/WillsCHEATTT/DOSSLib/issues">Report Bug</a>
     ·
     <a href="https://github.com/WillsCHEATTT/DOSSLib/issues">Request Feature</a>
