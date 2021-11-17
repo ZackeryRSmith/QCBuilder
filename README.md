@@ -1,7 +1,7 @@
 <!-- Badges -->
 ![](http://ForTheBadge.com/images/badges/made-with-python.svg)
 
-![](https://img.shields.io/badge/Ubuntu-FF5733?style=for-the-badge&logo=ubuntu&logoColor=white)
+![](https://img.shields.io/badge/Ubuntu-FF5733?style=for-the-badge&logo=ubuntu&logoColor=white):w
 
 <!-- TOP OF README ANCHOR -->
 <a name="top"></a>
