@@ -21,9 +21,11 @@
     <a href="https://github.com/ZackeryRSmith/Rob"><strong>Check out rob »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/WillsCHEATTT/DOSSLib/issues">Report Bug</a>
+    <a href="https://github.com/ZackeryRSmith/DOSSLib/issues/new">Report Bug</a>
     ·
-    <a href="https://github.com/WillsCHEATTT/DOSSLib/issues">Request Feature</a>
+    <a href="https://github.com/ZackeryRSmith/DOSSLib/issues/new">Request Feature</a>
+    <br />
+    <sub>If you request a feature put it under "enhancement" label</sub>
   </p>
 </div>
 
