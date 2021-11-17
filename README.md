@@ -1,8 +1,10 @@
 <!-- Badges -->
 ![](http://ForTheBadge.com/images/badges/made-with-python.svg)
 
-![](https://img.shields.io/badge/Ubuntu-FF5733?style=for-the-badge&logo=ubuntu&logoColor=white)
-
+<!-- ![](https://img.shields.io/badge/Ubuntu-FF5733?style=for-the-badge&logo=ubuntu&logoColor=white) -->
+<a href="https://ubuntu.com/#download">
+  <img src="images/ubuntu.png" alt="Ubuntu label" width="120" height="35" />
+</a>
 <!-- TOP OF README ANCHOR -->
 <a name="top"></a>
 
