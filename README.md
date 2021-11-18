@@ -39,20 +39,14 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#feature-request">Feature Request?</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -63,3 +57,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project <a name="about-the-project"></a>
+**QCBuilder** is a project developed to make installing [Rob](https://github.com/ZackeryRSmith/Rob) easy! QCBuilder has a clean color interface making it look 🌟*pretty*🌟. As well as looking good QCBuilder is option based. This means you can choose to not install certain apt packages, I3-Gaps, fonts, and such. QCBuilder is built for Rob! Other configs will not work (As of now).
+<!-- RETURN TO TOP FOOTER -->
+<footer>(<a href="#top">return to top</a>)</footer>
+
+## 
