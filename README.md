@@ -1,3 +1,5 @@
+###### Read me not 100% created yet.. sorry
+
 <!-- Badges -->
 ![](http://ForTheBadge.com/images/badges/made-with-python.svg)
 
