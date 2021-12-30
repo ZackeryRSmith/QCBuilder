@@ -271,7 +271,12 @@ class Getch:
         :return: Returns character(s) pressed
         """
         fd = sys.stdin.fileno()  # Check if output medium is a terminal
-        settings = termios.tcgetattr(fd)  # Gets file descripter attributes
+        try:
+            settings = termios.tcgetattr(fd)  # Gets file descripter attributes
+        except:
+            os.system("clear")
+            print("Inappropriate ioctl for device! (Are you using a terminal?)")
+            sys.exit(1)
         try:
             tty.setraw(sys.stdin.fileno())  # Set file descripter (In this case terminal) to raw
             ch = sys.stdin.buffer.raw.read(3)  # Reads 3 chars
