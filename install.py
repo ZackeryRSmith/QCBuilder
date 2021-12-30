@@ -196,7 +196,7 @@ def _install_rob(rolling_release):
 +-  Github repo owner: {__git_owner__} 
 +-  Version: {__git_rob_version__}                     
 +----------------------------------------------------------+""")
-                exit()
+                sys.exit(1)
         else:
             ##===-- Move around Robs components
             os.system(f"cd {os.path.join(__cwd__, 'Rob')} && mv i3 {__config__}")
@@ -223,7 +223,7 @@ def _install_rob(rolling_release):
  +-  Github repo owner: {__git_owner__} 
  +-  Version: {__git_rob_version__}                     
  +----------------------------------------------------------+""")
-            exit()
+            sys.exit(1)
 
 
     elif rolling_release == "bleeding_edge":
@@ -239,10 +239,10 @@ try:
 except Exception as exc:
     # If you are here that means that you have no connection or an issue with ping arises
     print("Oops.. an issue has arrised when running `ping`. Try restarting your wireless/wired connection and trying again later!")
-    exit()
+    sys.exit(1)
 if "unreachable" in ping_results:  # This
     print("Oops.. it seems you do not have a connection stable enough to run QCBuilder.. Please check your wireless/wired connection and try again later")
-    exit()
+    sys.exit(1)
 clean()
 
 # Check if QCBuilder is up-to-date (Add that code here)
