@@ -104,6 +104,14 @@ def clean():
     print(logo)
 
 
+def write(path, string):
+    """
+    Writes to a already existing file
+    """
+    with open(path, "w") as writing_file:
+        writing_file.write(string)
+
+
 ##===-- Installation functions
 def _install_rob(rolling_release):
     if rolling_release == "stable":
@@ -189,14 +197,41 @@ def _install_rob(rolling_release):
                 clean()
                 print("Wohoo! Rob is up-to-date and ready to go! If you ever want to update again re-run this script.\n")
                 print(f"""Additional Info on Installation
-+----------------------------------------------------------+  
-+-  Elapsed time: {elapsed_time}
-+-  Github repository: {__git_repo__}
-+-  Author: {__git_author__}
-+-  Github repo owner: {__git_owner__} 
-+-  Version: {__git_rob_version__}                     
-+----------------------------------------------------------+""")
+#+----------------------------------------------------------+  
+#+-  Elapsed time: {elapsed_time}
+#+-  Github repository: {__git_repo__}
+#+-  Author: {__git_author__}
+#+-  Github repo owner: {__git_owner__} 
+#+-  Version: {__git_rob_version__}                     
+#+----------------------------------------------------------+""")
                 sys.exit(1)
+            else:
+                ##===-- Move around updated components
+                os.system(f"cd {os.path.join(__cwd__, 'Rob')} && mv i3 {__config__}")
+                elapsed_time = timer.stop
+                __git_repo__ = ""
+                __git_author__ = ""
+                __git_owner__ = ""
+                __git_rob_version__ = ""
+                # Get info
+                with open(os.path.join(__cwd__, "Rob", "i3", "info.json")) as json_file:
+                    loaded_json = json.loads(json_file.read())
+                    __git_repo__ = loaded_json["repo"]
+                    __git_author__ = loaded_json["author"]
+                    __git_owner__ = loaded_json["owner"]
+                    __git_rob_version__ = loaded_json["version"]
+                
+                print("Woohoo! Rob is up-to-date and ready to go! If you ever want to update again re-run this script.\n")
+                print(f"""Additional Info on Installation
+#+----------------------------------------------------------+  
+#+-  Elapsed time: {elapsed_time}
+#+-  Github repository: {__git_repo__}
+#+-  Author: {__git_author__}
+#+-  Github repo owner: {__git_owner__} 
+#+-  Version: {__git_rob_version__}                     
+#+----------------------------------------------------------+""")
+                sys.exit(1)
+
         else:
             ##===-- Move around Robs components
             os.system(f"cd {os.path.join(__cwd__, 'Rob')} && mv i3 {__config__}")
@@ -214,7 +249,7 @@ def _install_rob(rolling_release):
                 __git_rob_version__ = loaded_json["version"]
 
             clean()
-            print("Wohoo! Rob is installed and ready to go! If you ever want to update again re-run this script.\n")
+            print("Woohoo! Rob is installed and ready to go! If you ever want to update again re-run this script.\n")
             print(f"""Additional Info on Installation
  +----------------------------------------------------------+  
  +-  Elapsed time: {elapsed_time}
@@ -238,24 +273,35 @@ try:
     ping_results = str(subprocess.check_output("ping -c 4 www.google.com", shell=True)).split("\\n")
 except Exception as exc:
     # If you are here that means that you have no connection or an issue with ping arises
-    print("Oops.. an issue has arrised when running `ping`. Try restarting your wireless/wired connection and trying again later!")
+    print("Oops.. an issue has arisen when running `ping`. Try restarting your wireless/wired connection and trying again later!")
     sys.exit(1)
 if "unreachable" in ping_results:  # This
     print("Oops.. it seems you do not have a connection stable enough to run QCBuilder.. Please check your wireless/wired connection and try again later")
     sys.exit(1)
 clean()
 
+
 # Check if QCBuilder is up-to-date (Add that code here)
 
-saveSelection = False
+''' Removed slightly unstable and unreliably without error handler (Will be added in v0.0.2)
+save_selection = False
 
-# Check if user wants to save choices
-print("Would you like to save chosen options after this point?")
-selection = listBox(cursor, ["Yes", "No"])
-if selection == "Yes":
-    saveSelection = True
+# Check if selections are saved
+if os.path.exists(os.path.join(__cwd__, "selections.json")) is False:
+    # Check if user wants to save choices
+    print("Would you like to save chosen options after this point?")
+    selection = listBox(cursor, ["Yes", "No"])
+    if selection == "Yes":
+        with open("selections.json", "w+") as selections_file:
+            selections_file.write('"save_selections":true,')   
+        save_selection = True
+    else:
+        with open("selections.json", "w+") as selections_file:
+            selections_file.write('"save_selections":false')
+        save_selection = False
 
 clean()
+'''
 
 # Download desired version
 print("What rolling release of Rob would you like to install")
