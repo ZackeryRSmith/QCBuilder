@@ -1,5 +1,7 @@
 __pycache__/
 build/
+linux/
+linux.zip
 dist/
 Rob/
 install.spec
