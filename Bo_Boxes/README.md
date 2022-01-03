@@ -1,4 +1,4 @@
-## Don't read me.. contridicting right?
+## Don't read me. contridicting right?
 
 
 <!-- TOP OF README ANCHOR -->
