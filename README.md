@@ -1,5 +1,5 @@
 ###### Read me not 100% created yet.. sorry
-###### Also quick note QCBuilder uses a privite (And old) version of Reter. Like I said Reter is not finished but I decided to use it here, keep this in mind while reading my code (If you do that is).
+###### Also quick note QCBuilder uses a privite (And old) version of Reter. Reter is not finished but is still stable so I decided to use it here, keep this in mind while reading my code (If you do that is).
 
 <!-- Badges -->
 ![](http://ForTheBadge.com/images/badges/made-with-python.svg)
